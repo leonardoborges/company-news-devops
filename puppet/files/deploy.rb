@@ -11,6 +11,7 @@ module MCollective
 
       action "war" do
         validate :source, String
+        Log.instance.info "Trying #{request[:source].inspect}"
         `wget #{request[:source]} -O /tmp/ROOT.war`
         `/etc/init.d/tomcat6 stop`
         `rm -r /var/lib/tomcat6/webapps/*`
