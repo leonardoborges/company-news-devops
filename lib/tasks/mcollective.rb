@@ -96,7 +96,7 @@ namespace :mc do
     server = ENV['ADMIN_SERVER']
     pipeline_counter = ENV['GO_PIPELINE_COUNTER']
     stage_counter = ENV['GO_STAGE_COUNTER']
-    "http://#{server}:8153/go/files/MainBuild/4/MainBuild/1/MainBuild/dist/companyNews.war"
+    "http://#{server}:8153/go/files/MainBuild/#{pipeline_counter}/MainBuild/#{stage_counter}/MainBuild/dist/companyNews.war"
   end
 
 
